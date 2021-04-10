@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="mydialog" parent="android:style/Theme.Dialog">
+        <!-- 背景透明,设置圆角对话框必须设置背景透明，否则四角会有背景色小块-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="MapDialog" parent="android:Theme.Dialog">
+        //背景颜色及透明程度
+        <item name="android:windowBackground">@android:color/transparent</item>
+        //Dialog是否半透明
+        <item name="android:windowIsTranslucent">false</item>
+        //是否去除标题
+        <item name="android:windowNoTitle">true</item>
+        //Dailog是否浮动/移动
+        <item name="android:windowIsFloating">false</item>
+        //弹出Dialog时，是否变暗背景
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

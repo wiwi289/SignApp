@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Welcome.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="@string/下一步"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextbtn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/setpassword"
+            android:background="@android:color/holo_blue_dark" android:textSize="18sp"
+            android:textColor="@color/colorWhite"/>
+        <TextView
+            android:text="@string/注册"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="80dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/phonenumber" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="180dp"
+            app:layout_constraintTop_toTopOf="parent" android:hint="@string/手机号" android:paddingBottom="20dp"
+            android:paddingStart="5dp"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/verifycode" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:hint="@string/验证码" android:paddingBottom="20dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/phonenumber"
+            android:paddingStart="5dp"/>
+
+        <EditText
+            android:id="@+id/setpassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/设置密码"
+            android:inputType="textPassword"
+            android:paddingStart="5dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifycode" />
+
+        <TextView
+            android:id="@+id/getcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/获取验证码"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/verifycode"
+            app:layout_constraintTop_toTopOf="@+id/verifycode" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

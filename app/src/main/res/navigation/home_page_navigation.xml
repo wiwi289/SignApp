@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="swu.cx.drawerdemo.HomeFragment"
+        android:label="今日打卡"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_gradeFragment"
+            app:destination="@id/gradeFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_cardNewsFragment"
+            app:destination="@id/cardNewsFragment2" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cardSignFragment"
+            app:destination="@id/cardSignFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gradeFragment2"
+        android:name="swu.cx.drawerdemo.CardGrade.GradeFragment"
+        android:label="成绩查询"
+        tools:layout="@layout/fragment_grade" />
+    <fragment
+        android:id="@+id/cardNewsFragment2"
+        android:name="swu.cx.drawerdemo.CardNews.CardNewsFragment"
+        android:label="校内资讯"
+        tools:layout="@layout/fragment_card_news" />
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="swu.cx.drawerdemo.CardCourse.CourseFragment"
+        android:label="课表查询"
+        tools:layout="@layout/fragment_course" />
+    <fragment
+        android:id="@+id/cardSignFragment"
+        android:name="swu.cx.drawerdemo.CardSignIn.CardSignFragment"
+        android:label="定位打卡"
+        tools:layout="@layout/fragment_card_sign" />
+</navigation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="showNameView">
+        <attr name="bgColor" format="color|reference"/>
+        <attr name="TextSize" format="float"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loadAnimationFragment2">
+
+    <fragment
+        android:id="@+id/loadAnimationFragment2"
+        android:name="swu.cx.drawerdemo.Welcome.LoadAnimationFragment"
+        android:label="fragment_load_animation"
+        tools:layout="@layout/fragment_load_animation" >
+        <action
+            android:id="@+id/action_loadAnimationFragment2_to_chooseIDFragment"
+            app:destination="@id/chooseIDFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="swu.cx.drawerdemo.Welcome.LoginFragment"
+        android:label="fragment_load"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loadFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            />
+        <argument
+            android:name="UserType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_loadFragment_to_teacherFragment"
+            app:destination="@id/teacherFragment" />
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="pwd"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="swu.cx.drawerdemo.Welcome.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_personInforFragment"
+            app:destination="@id/personInforFragment"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/personInforFragment"
+        android:name="swu.cx.drawerdemo.Welcome.PersonInforFragment"
+        android:label="fragment_person_infor"
+        tools:layout="@layout/fragment_person_infor" >
+        <argument
+            android:name="Spwd"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_personInforFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseIDFragment"
+        android:name="swu.cx.drawerdemo.Welcome.ChooseIDFragment"
+        android:label="fragment_choose_i_d"
+        tools:layout="@layout/fragment_choose_i_d" >
+        <action
+            android:id="@+id/action_chooseIDFragment_to_loadFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherFragment"
+        android:name="swu.cx.drawerdemo.TeacherDao.TeacherFragment"
+        android:label="fragment_teacher"
+        tools:layout="@layout/fragment_teacher" >
+        <action
+            android:id="@+id/action_teacherFragment_to_chooseIDFragment"
+            app:destination="@id/chooseIDFragment" />
+    </fragment>
+</navigation>
